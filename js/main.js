@@ -26,7 +26,7 @@ window.addEventListener('load', function () {
             title: hello,
             message: '欢迎来到 Manster-StartUp'
         });
-    }, 800);
+    }, 600);
 
     //中文字体缓加载-此处写入字体源文件
     //先行加载简体中文子集，后续补全字集
@@ -61,7 +61,7 @@ if (hour < 6) {
 
 //获取时间
 var t = null;
-t = setTimeout(time, 2000);
+time();
 
 function time() {
     clearTimeout(t);

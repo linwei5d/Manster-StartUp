@@ -116,7 +116,7 @@ img.error {
 
 .sou {
     max-width: 680px;
-    width: calc(100% - 60px);
+    width: calc(85% - 60px);
     animation: fade;
     -webkit-animation: fade 0.5s;
     -moz-animation: fade 0.5s;
@@ -161,7 +161,7 @@ img.error {
 }
 
 #time_text {
-    font-size: 3rem;
+    font-size: 3.5rem;
     margin: 6px 0px;
     text-shadow: var(--main-text-shadow);
     transition: 0.2s;
@@ -181,7 +181,7 @@ img.error {
 
 #day {
     font-size: 1.15rem;
-    opacity: 0.8;
+    opacity: 0.85;
     margin: 4px 0px;
     text-shadow: var(--main-text-shadow);
 }
