@@ -637,7 +637,7 @@ $(document).ready(function () {
 
     // 搜索框失去焦点事件
     $(".wd").blur(function () {
-        blurWd();
+        $("#bg").focus();
     });
     
     // 自动提示( 调用百度 api ）
