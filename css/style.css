@@ -115,8 +115,8 @@ img.error {
 }
 
 .sou {
-    max-width: 680px;
-    width: calc(85% - 60px);
+    max-width: 500px;
+    width: calc(65% - 60px);
     animation: fade;
     -webkit-animation: fade 0.5s;
     -moz-animation: fade 0.5s;
@@ -186,14 +186,6 @@ img.error {
     text-shadow: var(--main-text-shadow);
 }
 
-/*天气*/
-/* .weather {
-    color: #efefef;
-    opacity: 0.8;
-    font-size: 1.10rem;
-    text-shadow: var(--main-text-shadow);
-} */
-
 /*搜索框*/
 .search,
 .wd,
@@ -226,8 +218,6 @@ img.error {
     color: var(--main-text-color);
     background-color: var(--main-background-color);
     box-shadow: var(--main-search-shadow);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     overflow: hidden;
     transition: 0.5s ease;
 }
