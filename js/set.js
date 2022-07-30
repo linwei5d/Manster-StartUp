@@ -303,13 +303,12 @@ function blurWd() {
         "color": 'var(--main-text-color)',
         "transition": "ease 0.5s"
     });
-    //隐藏输入
-    $(".wd").val("");
     //时间下移
     $(".tool-all").css({
         "transform": "translateY(-120%)"
     });
-    //隐藏搜索建议
+    //隐藏 输入+搜索建议
+    $(".wd").val("");
     $("#keywords").hide();
 }
 
@@ -637,7 +636,7 @@ $(document).ready(function () {
 
     // 搜索框失去焦点事件
     $(".wd").blur(function () {
-        $("#bg").focus();
+        blurWd();
     });
     
     // 自动提示( 调用百度 api ）
@@ -650,13 +649,17 @@ $(document).ready(function () {
     });
 
     // 点击自动提示的搜索建议
+    $("#keywords").on("mousedown", function(e) {
+        e.preventDefault();
+    })
+
     $("#keywords").on("click", "div", function () {
-        var wd = $(this).text();
-        $(".wd").val(wd);
+        $(".wd").val($(this).text());
         $(".search").submit();
+        $(".wd").blur();
         //隐藏输入
-        $(".wd").val("");
-        $("#keywords").hide();
+        // $(".wd").val("");
+        // $("#keywords").hide();
     });
 
     // 自动提示键盘方向键选择操作

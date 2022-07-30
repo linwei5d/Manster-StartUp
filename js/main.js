@@ -31,12 +31,11 @@ window.addEventListener('load', function () {
     //中文字体缓加载-此处写入字体源文件
     //先行加载简体中文子集，后续补全字集
     //由于压缩过后的中文字体仍旧过大，可转移至对象存储或 CDN 加载
-    const font = new FontFace(
-        "Microsoft YaHei"
-        // "MiSans",
-        // "url(" + "./font/MiSans-Regular.woff2" + ")"
-    );
-    document.fonts.add(font);
+    // const font = new FontFace(
+    //     // "MiSans",
+    //     // "url(" + "./font/MiSans-Regular.woff2" + ")"
+    // );
+    // document.fonts.add(font);
 
 }, false)
 
@@ -84,19 +83,6 @@ function time() {
     t = setTimeout(time, 2000);
 }
 
-//获取天气
-//每日限量 100 次
-//请前往 https://www.tianqiapi.com/index/doc?version=v6 申请（免费）
-// fetch('https://yiketianqi.com/api?unescape=1&version=v6&appid=43986679&appsecret=TksqGZT7')
-//     .then(response => response.json())
-//     .then(data => {
-//         //$('#wea_text').html(data.wea + '&nbsp;' + data.tem_night + '℃' + '&nbsp;~&nbsp;' + data.tem_day + '℃')
-//         $('#wea_text').text(data.wea)
-//         $('#tem1').text(data.tem1)
-//         $('#tem2').text(data.tem2)
-//     })
-//     .catch(console.error)
-
 //火狐浏览器独立样式
 if (isFirefox = navigator.userAgent.indexOf("Firefox") > 0) {
     var head = document.getElementsByTagName('head')[0];
@@ -132,11 +118,9 @@ $(function () {
 })
 
 //点击搜索按钮
-$(".sou-button").click(function () {
-    iziToast.show({
-        message: '问题未修复，请点击键盘上的确认键以搜索',
-    });
-    // $('#search-submit').click();
+$(".sou-button").on("mousedown", function () {
+    $(".search").submit();
+    $(".wd").blur();
 });
 
 //控制台输出
